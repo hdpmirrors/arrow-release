@@ -83,6 +83,8 @@ public class TestArrowStream extends BaseFileTest {
         }
         writer.end();
         bytesWritten = writer.bytesWritten();
+
+        assertTrue(writer.getRecordBlocks().isEmpty());
       }
 
       ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
